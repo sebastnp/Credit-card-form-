@@ -1,0 +1,181 @@
+@use 'variables';
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem; }
+
+.main-container {
+  width: 375px;
+  height: 100vh;
+  margin: auto; }
+  .main-container__bg-section {
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    height: 240px;
+    position: relative; }
+  .main-container__form-section {
+    padding: 90px 24px 45px; }
+  @media (min-width: 1440px) {
+    .main-container {
+      width: 1440px;
+      margin: 0;
+      display: flex; }
+      .main-container__bg-section {
+        background-image: url(/images/bg-main-desktop.png);
+        width: 900px;
+        height: 100vh; } }
+
+.card__front {
+  width: 288px;
+  height: 160px;
+  color: white;
+  padding: 20px;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  top: 126px;
+  left: 16px;
+  z-index: 1;
+  background-image: url(/images/bg-card-front.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .card__front-logo {
+    width: 55px;
+    margin-bottom: 13px; }
+  .card__front-num {
+    margin-bottom: 15px; }
+  .card__front-details {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between; }
+  @media (min-width: 1440px) {
+    .card__front {
+      width: 450px;
+      height: 276px;
+      padding: 30px;
+      top: 187px;
+      left: 167px; }
+      .card__front-logo {
+        width: 86px;
+        margin-bottom: 30px; }
+      .card__front-num {
+        font-size: 1.6em;
+        margin-bottom: 15px; }
+      .card__front-details {
+        font-size: 0.8em; } }
+.card__back {
+  width: 288px;
+  height: 160px;
+  color: white;
+  padding: 20px;
+  position: absolute;
+  top: 30px;
+  left: 75px;
+  background-image: url(/images/bg-card-back.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .card__back-cvc {
+    letter-spacing: 0.2rem;
+    font-size: 0.6em;
+    margin-top: 52px;
+    text-align: right;
+    padding-right: 10px; }
+  @media (min-width: 1440px) {
+    .card__back {
+      width: 450px;
+      height: 276px;
+      padding: 30px;
+      top: 468px;
+      left: 257px; }
+      .card__back-cvc {
+        font-size: 1em;
+        margin-top: 82px;
+        padding-right: 30px; } }
+
+.form__label {
+  font-size: 0.65em;
+  letter-spacing: 0.2rem;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #21092f; }
+.form__input {
+  margin-bottom: 18px;
+  border: 1px solid #dedddf;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding-left: 10px; }
+  .form__input::placeholder {
+    color: #dedddf; }
+.form__date {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px; }
+  .form__date-mmyy {
+    display: flex;
+    gap: 10px; }
+.form__submit {
+  background-color: #21092f;
+  color: #dedddf;
+  width: 100%;
+  height: 50px;
+  letter-spacing: 1px;
+  border-radius: 8px; }
+  .form__submit:hover {
+    cursor: pointer; }
+@media (min-width: 1440px) {
+  .form {
+    margin-top: 180px;
+    width: 385px; } }
+
+.error {
+  color: #ff5252;
+  font-size: 0.6em;
+  margin: -10px 0 18px; }
+
+.form__errors-container {
+  display: flex; }
+
+.form__errors-container div {
+  width: 100px;
+  text-align: center; }
+
+.form__cvc-error {
+  text-align: center; }
+
+.completed {
+  display: none;
+  margin: auto;
+  text-align: center;
+  width: 375px; }
+  .completed__img {
+    width: 70px;
+    margin-bottom: 10px; }
+  .completed__title {
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 10px; }
+  .completed__text {
+    color: #8e8593;
+    margin-bottom: 40px; }
+  .completed__submit {
+    background-color: #21092f;
+    color: #dedddf;
+    width: 328px;
+    height: 50px;
+    letter-spacing: 1px;
+    border-radius: 8px; }
+    .completed__submit:hover {
+      cursor: pointer; }
+  @media (min-width: 1440px) {
+    .completed {
+      margin-top: 180px; } }
+
+/*# sourceMappingURL=styles.css.map */

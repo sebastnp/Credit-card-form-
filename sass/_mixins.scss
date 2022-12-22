@@ -1,0 +1,16 @@
+@mixin card($url) {
+    width: 288px;
+    height: 160px;
+    color: white;
+    padding: 20px;
+    background: {
+        image: url($url);
+        size: contain; //para que la imagen se ajuste al contenedor
+        repeat: no-repeat;
+    };
+    @media (min-width: 1440px){
+        width: 450px;
+        height: 276px;
+        padding: 30px;
+    }
+}

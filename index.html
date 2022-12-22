@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <title>Credit Card</title>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <section class="main-container__bg-section">
+            <!-- aqui va el bg -->
+            <div class="card">
+                <div class="card__front">
+                    <img class="card__front-logo" src="/images/card-logo.svg" alt="logo">
+                    <p class="card__front-num" id="card-number">0000 0000 0000 0000</p>
+                    <div class="card__front-details">
+                        <p id="cardHolder-name">JANE APLLESEED</p>
+                        <p><span id="card-mm">00</span>/<span id="card-yy">00</span></p>
+                    </div>
+                </div>
+
+                <div class="card__back">
+                    <p class="card__back-cvc" id="card-cvc">000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-container__form-section">
+            <form class="form" action="" id="cardForm">
+                <label class="form__label" for="cardHolder">CARDHOLDER NAME</label>
+                <input class="form__input" type="text" name="cardHolder" id="cardHolder"
+                    placeholder="e.g. Jane Appleseed">
+                <div class="form__carHdolder--error error" id="cardholder-error"></div>
+
+                <label class="form__label" for="cardNumber">CARD NUMBER</label>
+                <input class="form__input" type="text" name="cardNumber" id="cardNumber"
+                    placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                <div class="form__cardNumber--error error" id="cardnumber-error"></div>
+
+                <!-- utilizamos grid -->
+                <div class="form__date">
+                    <!--grid-->
+                    <!--1-->
+                    <label class="form__label" for="">EXP. DATE (MM/YY)</label>
+                    <!--2-->
+                    <label class="form__label" for="">CVC</label>
+                    <!--3-->
+                    <div class="form__date-mmyy">
+                        <input type="text" class=" form__input form__date-mmyy--mm" name="cardMonth"
+                            id="input-cardMonth" placeholder="MM"
+                            maxlength="2" >
+                        <input type="text" class="form__input form__date-mmyy--yy" name="cardYear" id="input-cardYear"
+                            placeholder="YY"
+                            maxlength="2">
+                    </div>
+                    <!--4-->
+                    <input type="text" name="cvc" id="input-cvc" class="form__input form__date-cvc"
+                        placeholder="e.g. 123"
+                        maxlength="3">
+                    <!--5-->
+                    <div class="form__errors-container">
+                        <div class="form__mm--error error" id="error-mm"></div>
+                        <div class="form__yy--error error" id="error-yy"></div>
+                    </div>
+                    <!--6-->
+                    <div class="form__cvc-error error" id="error-cvc"></div>
+                </div>
+                <input  id="form-input" class="form__submit" type="submit" value="Confirm">
+            </form>
+            <!--COMPLETED-->
+            <div class="completed" id="completed">
+                <img class="completed__img" src="/images/icon-complete.svg" alt="complete icon">
+                <h2 class="completed__title">THANK YOU!</h2>
+                <p class="completed__text">We've added your card details</p>
+                <input type="submit" value="Continue" id="completed-submit" class="completed__submit">
+            </div>
+        </section>
+    </main>
+
+    <!--SCRIPTS-->
+    <script src="/scripts.js"></script>
+</body>
+
+</html>
